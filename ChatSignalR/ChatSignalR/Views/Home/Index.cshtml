@@ -1,0 +1,13 @@
+﻿@inject IHttpContextAccessor _httpcontext
+@inject UserManager<IdentityUser> _usermanager
+@inject SignInManager<IdentityUser> _signinmanager
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">
+        Hi, <p class="text-primary">@_usermanager.GetUserName(User)</p>
+    </h1>
+    <a style="font-size:22px !important;">Welcome To Chat.</a>
+</div>
